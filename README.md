@@ -12,6 +12,10 @@ embedded golo template project
 
     git clone --q --depth 0 git@github.com:k33g/e-golo.git <your project app directory>
 
+or
+
+    git clone --q --depth 0 https://github.com/k33g/e-golo.git <your project app directory>
+
 ###Compile (single jar)
 
     mvn compile assembly:single

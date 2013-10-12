@@ -14,6 +14,7 @@ public class Main {
 
     /* load embedded golo resources*/
     scriptsLoader.loadGoloResource("golo/resources/","helper.golo");
+    scriptsLoader.loadGoloResource("golo/resources/","redis.golo");
 
     /* Load all external golo scripts (in app directory) */
     scriptsLoader.loadAll();

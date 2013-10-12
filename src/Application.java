@@ -37,6 +37,56 @@ public class Application {
         }
       }
     });
+  }
 
+  public void POST(String path, final MethodHandle something) {
+
+    post(new Route(path) {
+      @Override
+      public Object handle(Request request, Response response) {
+        Object ret = null;
+        try {
+          ret = something.invoke(request, response);
+        } catch (Throwable throwable) {
+          throwable.printStackTrace();
+        } finally {
+          return ret;
+        }
+      }
+    });
+  }
+
+  public void DELETE(String path, final MethodHandle something) {
+
+    delete(new Route(path) {
+      @Override
+      public Object handle(Request request, Response response) {
+        Object ret = null;
+        try {
+          ret = something.invoke(request, response);
+        } catch (Throwable throwable) {
+          throwable.printStackTrace();
+        } finally {
+          return ret;
+        }
+      }
+    });
+  }
+
+  public void PUT(String path, final MethodHandle something) {
+
+    put(new Route(path) {
+      @Override
+      public Object handle(Request request, Response response) {
+        Object ret = null;
+        try {
+          ret = something.invoke(request, response);
+        } catch (Throwable throwable) {
+          throwable.printStackTrace();
+        } finally {
+          return ret;
+        }
+      }
+    });
   }
 }
